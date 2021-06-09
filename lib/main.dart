@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lms/routes.dart';
 import 'package:lms/screens/login/login_screen.dart';
 
 void main() {
@@ -9,6 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/register',
+      routes: routes,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
