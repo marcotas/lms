@@ -16,21 +16,17 @@ class LoginScreen extends StatelessWidget {
             child: ConstrainedBox(
               constraints: BoxConstraints(maxWidth: 500, maxHeight: 500),
               child: Container(
-                width: double.infinity,
-                height: 410,
                 padding: EdgeInsets.all(48),
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.05),
                   borderRadius: BorderRadius.all(Radius.circular(24)),
                 ),
-                child: Column(
+                child: Wrap(
+                  runSpacing: 20,
                   children: [
                     AppTitle('Login'),
-                    SizedBox(height: 20),
                     InputText(placeholder: 'Email'),
-                    SizedBox(height: 20),
                     InputText(placeholder: 'Senha'),
-                    SizedBox(height: 20),
                     SizedBox(
                       width: double.infinity,
                       child: AppText(
@@ -39,7 +35,6 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.white.withOpacity(0.5),
                       ),
                     ),
-                    SizedBox(height: 20),
                     SizedBox(
                       width: double.infinity,
                       child: TextButton(
@@ -61,7 +56,6 @@ class LoginScreen extends StatelessWidget {
                         child: Text('Entrar'),
                       ),
                     ),
-                    SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
