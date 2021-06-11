@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lms/contants.dart';
 import 'package:lms/screens/register/register_screen.dart';
-import 'package:lms/widgets/app_text.dart';
+import 'package:lms/widgets/body_text.dart';
 import 'package:lms/widgets/app_title.dart';
 import 'package:lms/widgets/input_text.dart';
 
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                     InputText(placeholder: 'Senha'),
                     SizedBox(
                       width: double.infinity,
-                      child: AppText(
+                      child: BodyText(
                         'Esqueceu sua senha?',
                         textAlign: TextAlign.end,
                         color: Colors.white.withOpacity(0.5),
@@ -68,14 +68,14 @@ class LoginScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        AppText('Não tem uma conta?'),
+                        BodyText('Não tem uma conta?'),
                         SizedBox(width: 6),
                         GestureDetector(
                           onTap: () {
                             Navigator.pushReplacementNamed(
                                 context, RegisterScreen.routeName);
                           },
-                          child: AppText(
+                          child: BodyText(
                             'Criar conta',
                             color: Colors.blue,
                           ),

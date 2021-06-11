@@ -10,12 +10,12 @@ class AppTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      textAlign: textAlign,
-      style: GoogleFonts.inter(
-        color: Colors.white,
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-      ),
+      textAlign: textAlign, style: Theme.of(context).textTheme.headline4,
+      // style: GoogleFonts.inter(
+      //   color: Colors.white,
+      //   fontSize: 32,
+      //   fontWeight: FontWeight.bold,
+      // ),
     );
   }
 }

@@ -13,20 +13,20 @@ class InputText extends StatelessWidget {
         color: Colors.white,
       ),
       decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide.none,
-        ),
-        contentPadding: EdgeInsets.symmetric(
-          horizontal: 14,
-          vertical: 12,
-        ),
+        // border: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(8),
+        //   borderSide: BorderSide.none,
+        // ),
+        // contentPadding: EdgeInsets.symmetric(
+        //   horizontal: 14,
+        //   vertical: 12,
+        // ),
         hintText: placeholder,
-        filled: true,
-        fillColor: Colors.white.withOpacity(0.1),
-        hintStyle: TextStyle(
-          color: Colors.white.withOpacity(0.5),
-        ),
+        // filled: true,
+        // fillColor: Colors.white.withOpacity(0.1),
+        // hintStyle: TextStyle(
+        //   color: Colors.white.withOpacity(0.5),
+        // ),
       ),
     );
   }
