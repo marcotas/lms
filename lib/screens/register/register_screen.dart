@@ -5,6 +5,7 @@ import 'package:lms/screens/login/login_screen.dart';
 import 'package:lms/widgets/body_text.dart';
 import 'package:lms/widgets/app_title.dart';
 import 'package:lms/widgets/input_text.dart';
+import 'package:lms/widgets/theme_switch.dart';
 import 'package:provider/provider.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -101,24 +102,7 @@ class RegisterScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Consumer<AppTheme>(
-                      builder: (_, appTheme, __) {
-                        return Row(
-                          children: [
-                            Switch.adaptive(
-                              value: context.watch<AppTheme>().isDark,
-                              onChanged: (value) {
-                                appTheme.toggleDarkMode();
-                              },
-                              activeColor: Theme.of(context).primaryColor,
-                            ),
-                            BodyText(
-                              appTheme.isDark ? 'Dark Mode' : 'Light Mode',
-                            ),
-                          ],
-                        );
-                      },
-                    ),
+                    ThemeSwitch(),
                   ],
                 ),
               ),

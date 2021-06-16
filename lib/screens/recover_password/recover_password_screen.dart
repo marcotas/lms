@@ -25,11 +25,6 @@ class RecoverPasswordScreen extends StatelessWidget {
                 children: [
                   AppCard(
                     radius: 24,
-                    // padding: EdgeInsets.all(36),
-                    // decoration: BoxDecoration(
-                    //   color: Colors.white.withOpacity(0.05),
-                    //   borderRadius: BorderRadius.all(Radius.circular(24)),
-                    // ),
                     child: Wrap(
                       runSpacing: 20,
                       children: [
