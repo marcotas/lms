@@ -23,7 +23,7 @@ class AppTheme with ChangeNotifier {
         textStyle: TextStyle(fontSize: 16),
         padding: EdgeInsets.symmetric(
           horizontal: 30,
-          vertical: 20,
+          vertical: 14,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
@@ -68,7 +68,7 @@ class AppTheme with ChangeNotifier {
         textStyle: TextStyle(fontSize: 16),
         padding: EdgeInsets.symmetric(
           horizontal: 30,
-          vertical: 20,
+          vertical: 14,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
