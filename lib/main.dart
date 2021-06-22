@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/register',
+      initialRoute: '/home',
       debugShowCheckedModeBanner: false,
       routes: routes,
       themeMode: context.watch<AppTheme>().themeMode,

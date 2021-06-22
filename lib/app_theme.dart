@@ -80,6 +80,9 @@ class AppTheme with ChangeNotifier {
     ),
     switchTheme: SwitchThemeData(),
     textTheme: TextTheme(
+      bodyText2: GoogleFonts.inter(
+        fontSize: 18,
+      ),
       headline4: GoogleFonts.inter(
         fontSize: 32,
         fontWeight: FontWeight.bold,
