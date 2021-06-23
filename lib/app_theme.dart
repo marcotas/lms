@@ -35,6 +35,20 @@ class AppTheme with ChangeNotifier {
     ),
     switchTheme: SwitchThemeData(),
     textTheme: TextTheme(
+      bodyText1: GoogleFonts.inter(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: AppColors.textDark,
+      ),
+      bodyText2: GoogleFonts.inter(
+        fontSize: 18,
+        color: AppColors.textDark,
+      ),
+      headline3: GoogleFonts.inter(
+        fontSize: 48,
+        fontWeight: FontWeight.bold,
+        color: AppColors.textDark,
+      ),
       headline4: GoogleFonts.inter(
         fontSize: 32,
         fontWeight: FontWeight.bold,
@@ -80,8 +94,17 @@ class AppTheme with ChangeNotifier {
     ),
     switchTheme: SwitchThemeData(),
     textTheme: TextTheme(
+      bodyText1: GoogleFonts.inter(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+      ),
       bodyText2: GoogleFonts.inter(
         fontSize: 18,
+      ),
+      headline3: GoogleFonts.inter(
+        fontSize: 48,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
       ),
       headline4: GoogleFonts.inter(
         fontSize: 32,

@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTitle extends StatelessWidget {
   final String title;
   final TextAlign? textAlign;
-  AppTitle(this.title, {this.textAlign});
+  final Color? color;
+  AppTitle(this.title, {this.textAlign, this.color});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
-      textAlign: textAlign, style: Theme.of(context).textTheme.headline4,
-      // style: GoogleFonts.inter(
-      //   color: Colors.white,
-      //   fontSize: 32,
-      //   fontWeight: FontWeight.bold,
-      // ),
+      textAlign: textAlign,
+      style: Theme.of(context).textTheme.headline3!.copyWith(
+            color: color,
+          ),
     );
   }
 }
