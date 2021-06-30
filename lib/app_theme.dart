@@ -19,20 +19,6 @@ class AppTheme with ChangeNotifier {
     notifyListeners();
   }
 
-  String themeModeLabel(BuildContext context) {
-    switch (themeMode) {
-      case ThemeMode.dark:
-        print('is dark');
-        return 'Dark';
-      case ThemeMode.light:
-        print('is light');
-        return 'Light';
-      default:
-        print('is system');
-        return 'System';
-    }
-  }
-
   static Color textColor(BuildContext context) {
     return Theme.of(context).textTheme.bodyText1!.color!;
   }
