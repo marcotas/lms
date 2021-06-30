@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lms/app_theme.dart';
-import 'package:lms/widgets/body_text.dart';
+import 'package:lms/contants.dart';
+import 'package:lms/widgets/sidebar_item.dart';
 import 'package:provider/provider.dart';
 
 class ThemeSwitch extends StatelessWidget {
@@ -8,19 +9,14 @@ class ThemeSwitch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AppTheme>(
       builder: (_, appTheme, __) {
-        return Row(
-          children: [
-            Switch.adaptive(
-              value: context.watch<AppTheme>().isDark,
-              onChanged: (value) {
-                appTheme.toggleDarkMode();
-              },
-              activeColor: Theme.of(context).primaryColor,
-            ),
-            BodyText(
-              appTheme.isDark ? 'Dark Mode' : 'Light Mode',
-            ),
-          ],
+        var isDark = appTheme.isDark;
+        return SidebarItem(
+          text: isDark ? 'Dark' : 'Light',
+          icon: isDark ? 'moon' : 'sun',
+          iconColor: AppColors.primary,
+          onPressed: () {
+            appTheme.toggleDarkMode();
+          },
         );
       },
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lms/contants.dart';
 import 'package:lms/models/course.dart';
 import 'package:lms/screens/home/widgets/featured_course.dart';
 import 'package:lms/screens/home/widgets/recommended_course.dart';
@@ -7,10 +6,9 @@ import 'package:lms/screens/home/widgets/tag_filters.dart';
 import 'package:lms/widgets/app_title.dart';
 import 'package:lms/widgets/input_text.dart';
 import 'package:lms/widgets/sidebar.dart';
-import 'package:lms/widgets/tag_badge.dart';
 
 class Body extends StatelessWidget {
-  List<Course> courses = [
+  final List<Course> courses = [
     Course(
       id: 1,
       name: 'Introdução ao Laravel',

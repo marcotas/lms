@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lms/app_theme.dart';
 import 'package:lms/contants.dart';
+import 'package:provider/provider.dart';
 
 class TagBadge extends StatelessWidget {
   final String text;
@@ -15,12 +17,20 @@ class TagBadge extends StatelessWidget {
       child: Stack(
         children: [
           Positioned.fill(
-            child: AnimatedContainer(
-              duration: Duration(milliseconds: 200),
-              decoration: BoxDecoration(
-                color:
-                    active ? Theme.of(context).primaryColor : AppColors.white10,
-              ),
+            child: Consumer<AppTheme>(
+              builder: (_, appTheme, __) {
+                Color backgroundColor =
+                    appTheme.isDark ? AppColors.white10 : AppColors.black10;
+
+                return AnimatedContainer(
+                  duration: Duration(milliseconds: 200),
+                  decoration: BoxDecoration(
+                    color: active
+                        ? Theme.of(context).primaryColor
+                        : backgroundColor,
+                  ),
+                );
+              },
             ),
           ),
           TextButton(

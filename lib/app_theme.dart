@@ -13,6 +13,10 @@ class AppTheme with ChangeNotifier {
     notifyListeners();
   }
 
+  static Color textColor(BuildContext context) {
+    return Theme.of(context).textTheme.bodyText1!.color!;
+  }
+
   static final ligthTheme = ThemeData(
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: Colors.white,
