@@ -37,7 +37,7 @@ class FeaturedCourse extends StatelessWidget {
                       filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: context.watch<AppTheme>().isDark
+                          color: context.watch<AppTheme>().isDark(context)
                               ? AppColors.darkBg.withOpacity(0.75)
                               : AppColors.lightBg.withOpacity(0.75),
                         ),

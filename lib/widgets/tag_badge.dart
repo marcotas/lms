@@ -19,8 +19,9 @@ class TagBadge extends StatelessWidget {
           Positioned.fill(
             child: Consumer<AppTheme>(
               builder: (_, appTheme, __) {
-                Color backgroundColor =
-                    appTheme.isDark ? AppColors.white10 : AppColors.black10;
+                Color backgroundColor = appTheme.isDark(context)
+                    ? AppColors.white10
+                    : AppColors.black10;
 
                 return AnimatedContainer(
                   duration: Duration(milliseconds: 200),

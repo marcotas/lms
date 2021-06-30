@@ -9,13 +9,13 @@ class ThemeSwitch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AppTheme>(
       builder: (_, appTheme, __) {
-        var isDark = appTheme.isDark;
+        var isDark = appTheme.isDark(context);
         return SidebarItem(
-          text: isDark ? 'Dark' : 'Light',
+          text: appTheme.themeModeLabel(context),
           icon: isDark ? 'moon' : 'sun',
           iconColor: AppColors.primary,
           onPressed: () {
-            appTheme.toggleDarkMode();
+            appTheme.toggleDarkMode(context);
           },
         );
       },

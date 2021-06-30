@@ -4,13 +4,33 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/contants.dart';
 
 class AppTheme with ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.dark;
+  ThemeMode themeMode = ThemeMode.system;
 
-  bool get isDark => themeMode == ThemeMode.dark;
+  bool isDark(context) {
+    return Theme.of(context).brightness == Brightness.dark;
+  }
 
-  void toggleDarkMode() {
-    themeMode = isDark ? ThemeMode.light : ThemeMode.dark;
+  void toggleDarkMode(BuildContext context) {
+    var currentIndex = ThemeMode.values.indexOf(themeMode);
+    currentIndex++;
+    if (currentIndex > 2) currentIndex = 0;
+    themeMode = ThemeMode.values[currentIndex];
+
     notifyListeners();
+  }
+
+  String themeModeLabel(BuildContext context) {
+    switch (themeMode) {
+      case ThemeMode.dark:
+        print('is dark');
+        return 'Dark';
+      case ThemeMode.light:
+        print('is light');
+        return 'Light';
+      default:
+        print('is system');
+        return 'System';
+    }
   }
 
   static Color textColor(BuildContext context) {

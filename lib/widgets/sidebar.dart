@@ -14,7 +14,7 @@ class Sidebar extends StatelessWidget {
         width: 120,
         padding: EdgeInsets.symmetric(vertical: 48),
         decoration: BoxDecoration(
-          color: appTheme.isDark ? AppColors.white5 : AppColors.black5,
+          color: appTheme.isDark(context) ? AppColors.white5 : AppColors.black5,
         ),
         child: Column(
           children: [

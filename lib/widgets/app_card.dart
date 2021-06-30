@@ -14,7 +14,7 @@ class AppCard extends StatelessWidget {
     return Container(
         padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
-          color: context.watch<AppTheme>().isDark
+          color: context.watch<AppTheme>().isDark(context)
               ? AppColors.white5
               : AppColors.black10,
           borderRadius: BorderRadius.all(Radius.circular(radius)),

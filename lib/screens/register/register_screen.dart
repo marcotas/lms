@@ -26,7 +26,7 @@ class RegisterScreen extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(48),
                       decoration: BoxDecoration(
-                        color: context.watch<AppTheme>().isDark
+                        color: context.watch<AppTheme>().isDark(context)
                             ? AppColors.white5
                             : AppColors.black10,
                         borderRadius: BorderRadius.all(Radius.circular(24)),
