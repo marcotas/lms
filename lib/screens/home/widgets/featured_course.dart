@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:lms/app_theme.dart';
 import 'package:lms/contants.dart';
+import 'package:lms/core/modal_page.dart';
 import 'package:lms/models/course.dart';
 import 'package:provider/provider.dart';
 
@@ -19,13 +20,34 @@ class FeaturedCourse extends StatelessWidget {
           children: [
             Stack(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.network(
-                    course.imageUrl,
-                    width: 668,
-                    height: 330,
-                    fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      ModalPage(
+                        builder: (context) => Padding(
+                          padding: const EdgeInsets.only(top: 64.0),
+                          child: Container(
+                            width: 500,
+                            color: Colors.blue,
+                            child: Center(
+                              child: Text(
+                                'Foi',
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.network(
+                      course.imageUrl,
+                      width: 668,
+                      height: 330,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Positioned(
