@@ -26,6 +26,7 @@ class AppTheme with ChangeNotifier {
   static final ligthTheme = ThemeData(
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: Colors.white,
+    backgroundColor: Colors.white,
     brightness: Brightness.light,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -56,7 +57,7 @@ class AppTheme with ChangeNotifier {
       ),
       headline3: GoogleFonts.inter(
         fontSize: 48,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
         color: AppColors.textDark,
       ),
       headline4: GoogleFonts.inter(
@@ -85,6 +86,7 @@ class AppTheme with ChangeNotifier {
   static final darkTheme = ThemeData(
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.darkBg,
+    backgroundColor: AppColors.darkBg,
     brightness: Brightness.dark,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -113,7 +115,7 @@ class AppTheme with ChangeNotifier {
       ),
       headline3: GoogleFonts.inter(
         fontSize: 48,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
         color: Colors.white,
       ),
       headline4: GoogleFonts.inter(

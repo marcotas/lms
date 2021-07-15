@@ -32,12 +32,14 @@ class ModalPage extends PageRoute {
   @override
   Widget buildPage(BuildContext context, Animation<double> animation,
       Animation<double> secondaryAnimation) {
-    return Column(
-      children: [
-        Stack(
-          children: [_builder(context)],
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Stack(
+            children: [_builder(context)],
+          ),
+        ],
+      ),
     );
   }
 
