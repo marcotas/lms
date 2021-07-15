@@ -29,13 +29,16 @@ class FeaturedCourse extends StatelessWidget {
                       ),
                     );
                   },
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Image.network(
-                      course.imageUrl,
-                      width: 668,
-                      height: 330,
-                      fit: BoxFit.cover,
+                  child: Hero(
+                    tag: 'course-image-${course.id}',
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.network(
+                        course.imageUrl,
+                        width: 668,
+                        height: 330,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),

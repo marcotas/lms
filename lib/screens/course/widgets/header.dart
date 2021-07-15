@@ -16,11 +16,14 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.network(
-          course.imageUrl,
-          width: double.infinity,
-          height: 400,
-          fit: BoxFit.cover,
+        Hero(
+          tag: 'course-image-${course.id}',
+          child: Image.network(
+            course.imageUrl,
+            width: double.infinity,
+            height: 400,
+            fit: BoxFit.cover,
+          ),
         ),
         Positioned(
           top: 24,
